@@ -13,7 +13,13 @@ module.exports = {
       options: {
         fonts: [
           `limelight`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `Patua One`,
+          `Comfortaa`,
+          `Montserrat\:800`,
+          `Questrial`,
+          `Didact Gothic`,
+          `Poppins\:900,display=swap`
         ],
         display: 'swap'
       }

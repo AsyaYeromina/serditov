@@ -2,3 +2,7 @@ html {
   background-color: black;
   color: white;
 }
+
+.dots {
+  display: flex;
+}
