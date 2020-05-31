@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import headerStyles from "./header.module.css"
+import headerStyles from "../header/header.module.css"
 
 const MainLogo = ()=> {
   return (
@@ -17,7 +17,7 @@ const MainNavigation = () => {
     <nav className={headerStyles.mainNav}>
       <ul>
           <li><Link to="/">About</Link></li>
-          <li><Link to="/">Showcase</Link></li>
+          <li><Link to="/showcase">Showcase</Link></li>
           <li><Link to="/">Portfolio</Link></li>
           <li><Link to="/">Services</Link></li>
           <li><Link to="/">Contact</Link></li>

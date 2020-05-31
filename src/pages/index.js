@@ -1,11 +1,6 @@
-import React from "react"
-import { Title, Link, Meta } from "react-head"
-
-// CSS
-import "normalize.css"
-
-// Components
-import Header from "../components/header"
+import React from "react";
+import { Title, Link, Meta } from "react-head";
+import Layout from '../components/layout'
 
 const Seo = () => (
   <>
@@ -17,9 +12,8 @@ const Seo = () => (
 
 export default function Home() {
   return (
-    <div> 
+    <Layout > 
       <Seo />
-      <Header />
-    </div>
+    </Layout>
   );
 }

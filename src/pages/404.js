@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import TitleHeader from "../components/header"
+//import TitleHeader from "../components/header"
 
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
 
     <header>
       <Link to="/">BACK</Link>
-      <TitleHeader headerText="404 - page not found" style={{textTransform: `upperCase`}}/>
+      {/* <TitleHeader headerText="404 - page not found" style={{textTransform: `upperCase`}}/> */}
     </header>
   );
 }
