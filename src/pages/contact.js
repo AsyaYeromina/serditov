@@ -1,13 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
-//import Header from "../components/header"
+import React from "react";
+import { Title, Link, Meta } from "react-head";
+import Layout from '../components/layout';
 
-export default function Contact() {
+const Seo = () => (
+  <>
+    <Title>Contacts</Title>
+    <Meta name="description" content="Contacts Anton Serditov architect" />
+    <Link rel="canonical" content="https://serditov.com/contact" />
+  </>
+);
+
+const Contact = ({location}) => {
   return (
-    <div style={{ color: `teal` }}>
-      <Link to="/">Home</Link>
-      {/* <Header headerText="Contact" /> */}
+    <Layout location={location}>
+      <Seo />
       <p>Send us a message!</p>
-    </div>
+    </Layout>
   )
 }
+
+export default Contact

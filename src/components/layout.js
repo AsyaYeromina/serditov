@@ -1,12 +1,13 @@
 import React from "react";
-// CSS
-import "normalize.css";
-import Header from './header/';
+import Header from "./header/header";
 
-const Layout = ({ children }, props) => {
-  console.log(props)
+const Layout = ({ location, children }) => {
+
+  let pageClass = '';
+  location.state.pathname === '/' ? pageClass = '-main' : pageClass = location.pathname.replace('/', '-');
+  
   return (
-    <div>
+    <div className={`page${pageClass}`}>
       <Header />
       {children}
     </div>
