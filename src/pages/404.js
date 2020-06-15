@@ -1,14 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
-//import TitleHeader from "../components/header"
+import { Link as LinkGatsby } from "gatsby"
+import { Title, Link, Meta } from "react-head";
+import Layout from '../components/layout'
 
 
-export default function Home() {
+const Seo = () => (
+  <>
+    <Title>Serditov architect - 404: page not found</Title>
+    <Meta name="description" content="Anton Serditov architect" />
+    <Link rel="canonical" content="https://serditov.com/" />
+  </>
+);
+
+
+const Error404 = ({location}) => {
   return (
-
-    <header>
-      <Link to="/">BACK</Link>
-      {/* <TitleHeader headerText="404 - page not found" style={{textTransform: `upperCase`}}/> */}
-    </header>
+    <Layout location={location}> 
+      <Seo />
+      <h1>404 - page not found</h1>
+      <LinkGatsby to="/">BACK</LinkGatsby>
+    </Layout>
   );
 }
+export default Error404;

@@ -1,13 +1,21 @@
-import React from "react"
-//import Header from "../components/header"
+import React from "react";
+import { Title, Link, Meta } from "react-head";
+import Layout from '../components/layout';
+import TabsVertical from '../components/tabs/tabs'
 
-export default function About() {
+const Seo = () => (
+  <>
+    <Title>About Serditov architect</Title>
+    <Meta name="description" content="About Anton Serditov architect" />
+    <Link rel="canonical" content="https://serditov.com/" />
+  </>
+);
+
+export default function About({ location }) {
   return (
-    <div style={{ color: `teal` }}>
-      {/* <Header headerText="About Gatsby" /> */}
-      {/* <Header headerText="It's pretty cool" /> */}
-
-      <p>Such wow. Very React.</p>
-    </div>
-  )
+    <Layout location={location}> 
+      <Seo />
+      <TabsVertical />
+    </Layout>
+  );
 }

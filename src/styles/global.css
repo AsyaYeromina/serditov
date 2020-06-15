@@ -3,6 +3,68 @@ html {
   color: white;
 }
 
-.dots {
+.thumbnails {
+position: fixed;
+left: 20%;
+top: 10px;
+}
+
+.page-showcase .slick-dots {
   display: flex;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100vh;
+  top: -3000px;
+  transition: all .5s;
+  background: #000;
+}
+
+.thumbnails_opened.page-showcase .slick-dots {
+  top: 50px;
+  transition: all .5s;
+}
+
+.page-showcase .slick-dots li {
+  height: 150px;
+  width: auto;
+  margin: 0;
+  border: 4px solid #000;
+  border-radius: 3px;
+}
+
+.page-showcase .slick-dots li img {
+  width: auto;
+  height: -webkit-fill-available;
+}
+
+.slick-slide {
+  border: 2px solid #000;
+}
+
+.page-showcase .slick-slide img {
+  width: auto;
+  height: -webkit-fill-available;
+}
+
+.page-main .slick-slide img {
+  width: 100%;
+}
+
+.page-main {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-main header:after {
+  content: none;
+}
+
+#gatsby-focus-wrapper > div:not(.page-showcase) .thumbnails {
+  display: none;
+}
+
+.slick-list {
+  height: 100vh;
 }
